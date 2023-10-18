@@ -30,7 +30,7 @@ const Loginpage = () => {
           lastSignInTime,
         };
         console.log(updateUser);
-        fetch("http://localhost:3000/users", {
+        fetch("https://techventure-server.onrender.com/users", {
           method: "PATCH",
           headers: {
             "content-type": "application/json",

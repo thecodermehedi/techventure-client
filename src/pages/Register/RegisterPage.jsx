@@ -56,7 +56,7 @@ const RegisterPage = () => {
             creationTime: user.metadata.creationTime,
           };
 
-          fetch("http://localhost:3000/users", {
+          fetch("https://techventure-server.onrender.com/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
