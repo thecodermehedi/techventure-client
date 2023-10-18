@@ -1,11 +1,11 @@
 const Errorpage = () => {
   return (
-    <div className="grid h-screen px-4 bg-white place-content-center">
+    <div className="grid h-screen px-4 bg-[#1D232A] place-content-center">
       <div className="text-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1024 768"
-          className="w-auto h-56 mx-auto text-black sm:h-64"
+          className="w-auto h-56 mx-auto text-[#4B91F1] sm:h-64"
         >
           <g fill="none" fillRule="evenodd">
             <g fill="#4B91F1">
@@ -21,11 +21,11 @@ const Errorpage = () => {
           </g>
         </svg>
 
-        <h1 className="mt-6 text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+        <h1 className="mt-6 text-2xl font-bold tracking-tight text-slate-300 sm:text-4xl">
           Uh-oh!
         </h1>
 
-        <p className="mt-4 text-gray-500">We can&#39;t find that page.</p>
+        <p className="mt-4 text-gray-400">We can&#39;t find that page.</p>
       </div>
     </div>
   );
