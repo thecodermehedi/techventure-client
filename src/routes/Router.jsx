@@ -1,48 +1,67 @@
 import {createBrowserRouter} from "react-router-dom";
-import Main from './../layouts/Main/Main';
-import Errorpage from './../pages/Error/Errorpage';
-import Homepage from './../pages/Home/Homepage';
-import AddProductPage from './../pages/AddProduct/AddProductPage';
-import UpdateProductPage from './../pages/UpdateProduct/UpdateProductPage';
-import MyCartPage from './../pages/MyCart/MyCartPage';
-import Loginpage from './../pages/Login/Loginpage';
-import RegisterPage from './../pages/Signup/RegisterPage';
-
+import Main from "./../layouts/Main/Main";
+import PublicRouter from "./PublicRouter";
+import PrivateRouter from "./PrivateRouter";
+import Homepage from "./../pages/Home/Homepage";
+import Loginpage from "./../pages/Login/Loginpage";
+import Errorpage from "./../pages/Error/Errorpage";
+import MyCartPage from "./../pages/MyCart/MyCartPage";
+import RegisterPage from "../pages/Register/RegisterPage";
+import AddProductPage from "./../pages/AddProduct/AddProductPage";
+import UpdateProductPage from "./../pages/UpdateProduct/UpdateProductPage";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Main/>,
-    errorElement: <Errorpage/>,
+    element: <Main />,
+    errorElement: <Errorpage />,
     children: [
       {
         path: "/",
-        element: <Homepage/>,
+        element: <Homepage />,
       },
       {
-        path:"/addproduct",
-        element:<AddProductPage/>
+        path: "/addproduct",
+        element: (
+          <PrivateRouter>
+            <AddProductPage />
+          </PrivateRouter>
+        ),
       },
       {
-        path:"/updateproduct/:id",
-        element:<UpdateProductPage/>
+        path: "/updateproduct/:id",
+        element: (
+          <PrivateRouter>
+            <UpdateProductPage />
+          </PrivateRouter>
+        ),
       },
       {
-        path:"/cart",
-        element:<MyCartPage/>
+        path: "/cart",
+        element: (
+          <PrivateRouter>
+            <MyCartPage />
+          </PrivateRouter>
+        ),
       },
       {
-        path:"/login",
-        element:<Loginpage/>
+        path: "/login",
+        element: (
+          <PublicRouter>
+            <Loginpage />
+          </PublicRouter>
+        ),
       },
       {
-        path:"/register",
-        element:<RegisterPage/>
-      }
-    ]
+        path: "/register",
+        element: (
+          <PublicRouter>
+            <RegisterPage />
+          </PublicRouter>
+        ),
+      },
+    ],
   },
 ]);
-
-
 
 export default Router;
