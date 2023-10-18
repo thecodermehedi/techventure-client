@@ -7,15 +7,3 @@
 .bg-premium {
   background: linear-gradient(to right, rgb(110, 226, 245), rgb(100, 84, 240));
 }
-
-.hover-premium:hover{
-  background: linear-gradient(to right, rgb(110, 226, 245), rgb(100, 84, 240));
-}
-
-.bg-transparent {
-  background: transparent;
-}
-
-.hover-transparent:hover{
-  background: transparent;
-}
