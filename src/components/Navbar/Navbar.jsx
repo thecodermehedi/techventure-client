@@ -111,7 +111,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-16">{NavLinks}</ul>
         </div>
         <div className="navbar-end">
-          <label className="swap swap-rotate mr-2  md:mr-8 ">
+          <label className="swap swap-rotate invisible md:visible md:mr-8 ">
             <input
               type="checkbox"
               checked={isChecked}
@@ -120,7 +120,7 @@ const Navbar = () => {
 
             {/* sun icon */}
             <svg
-              className="swap-on fill-black w-6 md:w-10 h-10"
+              className="swap-on fill-black w-10 h-10"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -129,7 +129,7 @@ const Navbar = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-off fill-white w-6 md:w-10 h-10"
+              className="swap-off fill-white w-10 h-10"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
