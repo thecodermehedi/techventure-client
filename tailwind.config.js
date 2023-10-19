@@ -6,11 +6,9 @@ export default {
     extend: {
       colors: {
         main: "#4B91F1",
-        side: "#6ee2f5",
       },
       fontFamily: {
-        raleway: ["Raleway", "sans-serif"],
-        modak: ["Modak", "cursive"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

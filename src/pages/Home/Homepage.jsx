@@ -92,7 +92,7 @@ const Homepage = () => {
                   Total Sales
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-primary md:text-5xl font-sans">
+                <dd className="text-4xl font-extrabold text-primary md:text-5xl ">
                   $4.8m
                 </dd>
               </div>
@@ -102,7 +102,7 @@ const Homepage = () => {
                   Investors
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-secondary md:text-5xl font-sans">
+                <dd className="text-4xl font-extrabold text-secondary md:text-5xl ">
                   500+
                 </dd>
               </div>
@@ -112,7 +112,7 @@ const Homepage = () => {
                   Users
                 </dt>
 
-                <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl font-sans">
+                <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl ">
                   100,000+
                 </dd>
               </div>

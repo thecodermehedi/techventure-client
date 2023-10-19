@@ -1,5 +1,5 @@
 import {createBrowserRouter} from "react-router-dom";
-import Main from "./../layouts/Main/Main";
+import RootPage from "../layouts/Root/RootPage";
 import PublicRouter from "./PublicRouter";
 import PrivateRouter from "./PrivateRouter";
 import Homepage from "./../pages/Home/Homepage";
@@ -15,7 +15,7 @@ import ViewProductPage from "../pages/ViewProduct/ViewProductPage";
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: <RootPage />,
     errorElement: <Errorpage />,
     children: [
       {
@@ -23,7 +23,7 @@ const Router = createBrowserRouter([
         element: <Homepage />,
       },
       {
-        path: "/brand/:id",
+        path: "/brand/:name",
         element: <Brandpage />,
       },
       {
@@ -35,7 +35,7 @@ const Router = createBrowserRouter([
         ),
       },
       {
-        path: "/viewProduct/:id",
+        path: "/viewProduct/id/:id",
         element: (
           <PrivateRouter>
             <ViewProductPage />
@@ -43,7 +43,7 @@ const Router = createBrowserRouter([
         ),
       },
       {
-        path: "/updateProduct/:id",
+        path: "/updateProduct/id/:id",
         element: (
           <PrivateRouter>
             <UpdateProductPage />

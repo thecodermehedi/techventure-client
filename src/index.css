@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Modak&family=Raleway:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .bg-premium {
+  background: linear-gradient(to right, rgb(110, 226, 245), rgb(100, 84, 240));
+}
+.hover-premium:hover {
   background: linear-gradient(to right, rgb(110, 226, 245), rgb(100, 84, 240));
 }

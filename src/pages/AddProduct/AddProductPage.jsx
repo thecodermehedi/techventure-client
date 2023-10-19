@@ -43,7 +43,7 @@ const AddProductPage = () => {
       .then((data) => {
         if (data.insertedId) {
           Swal.fire({
-            title: "Coffee added successfully",
+            title: "Product added successfully",
             icon: "success",
             confirmButtonText: "Okay",
           });
@@ -61,7 +61,7 @@ const AddProductPage = () => {
           <h1 className=" text-2xl md:text-3xl lg:text-5xl text-center font-bold  text-main font-rancho">
             Add New Product
           </h1>
-          <p className="text-black dark:text-white text-center my-5 text-opacity-70 font-raleway md:text-base lg:text-lg">
+          <p className="text-black dark:text-white text-center my-5 text-opacity-70  md:text-base lg:text-lg">
             Effortlessly expand your product range and accelerate growth with
             our intuitive <strong>Add New Product</strong> form - simplify the
             process, seize new market opportunities, and drive revenue to new
@@ -70,7 +70,7 @@ const AddProductPage = () => {
           <div className="-mx-3 md:flex mb-6">
             <div className="md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block  text-black dark:text-white text-xl text-opacity-80 font-raleway font-semibold mb-2"
+                className="block  text-black dark:text-white text-xl text-opacity-80  font-semibold mb-2"
                 htmlFor="name"
               >
                 Name
@@ -85,7 +85,7 @@ const AddProductPage = () => {
             </div>
             <div className="md:w-1/2 px-3">
               <label
-                className=" block text-black dark:text-white text-xl text-opacity-80 font-raleway font-semibold mb-2"
+                className=" block text-black dark:text-white text-xl text-opacity-80  font-semibold mb-2"
                 htmlFor="brand"
               >
                 Brand
@@ -94,10 +94,11 @@ const AddProductPage = () => {
                 className="select w-full text-black dark:text-white rounded-3xl  py-3 px-4 bg-main bg-opacity-10 focus:outline-none"
                 id="brand"
                 required
+                defaultValue={"default"}
               >
                 <option
                   disabled
-                  defaultValue
+                  value={"default"}
                   className="text-black dark:text-white bg-white dark:bg-black"
                 >
                   Select Brand
@@ -144,7 +145,7 @@ const AddProductPage = () => {
           <div className="-mx-3 md:flex mb-6">
             <div className="md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block text-black dark:text-white text-xl text-opacity-80 font-raleway font-semibold mb-2"
+                className="block text-black dark:text-white text-xl text-opacity-80  font-semibold mb-2"
                 htmlFor="type"
               >
                 Type
@@ -153,10 +154,11 @@ const AddProductPage = () => {
                 className="select w-full text-black dark:text-white rounded-3xl  py-3 px-4 bg-main bg-opacity-10 focus:outline-none"
                 id="type"
                 required
+                defaultValue={"default"}
               >
                 <option
                   disabled
-                  defaultValue
+                  value={"default"}
                   className="text-black dark:text-white bg-white dark:bg-black"
                 >
                   Select Product type
@@ -225,13 +227,13 @@ const AddProductPage = () => {
             </div>
             <div className="md:w-1/2 px-3">
               <label
-                className=" block text-black dark:text-white text-xl text-opacity-80 font-raleway font-semibold mb-2"
+                className=" block text-black dark:text-white text-xl text-opacity-80  font-semibold mb-2"
                 htmlFor="price"
               >
                 Price
               </label>
               <input
-                className=" w-full  text-black dark:text-white rounded-3xl placeholder:text-gray-600 dark:placeholder:text-slate-300 focus:placeholder:text-opacity-0 dark:focus:placeholder:text-opacity-0 py-3 px-4 bg-main bg-opacity-10 focus:outline-none font-mono placeholder:font-raleway"
+                className=" w-full  text-black dark:text-white rounded-3xl placeholder:text-gray-600 dark:placeholder:text-slate-300 focus:placeholder:text-opacity-0 dark:focus:placeholder:text-opacity-0 py-3 px-4 bg-main bg-opacity-10 focus:outline-none  placeholder:"
                 id="price"
                 type="number"
                 placeholder="Enter Product Price"
@@ -242,7 +244,7 @@ const AddProductPage = () => {
           <div className="-mx-3 md:flex mb-6">
             <div className="md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block  text-black dark:text-white text-xl text-opacity-80 font-raleway font-semibold mb-2"
+                className="block  text-black dark:text-white text-xl text-opacity-80  font-semibold mb-2"
                 htmlFor="category"
               >
                 Rating
@@ -263,7 +265,7 @@ const AddProductPage = () => {
             </div>
             <div className="md:w-1/2 px-3">
               <label
-                className=" block text-black dark:text-white text-xl text-opacity-80 font-raleway font-semibold mb-2"
+                className=" block text-black dark:text-white text-xl text-opacity-80  font-semibold mb-2"
                 htmlFor="details"
               >
                 Details
@@ -279,7 +281,7 @@ const AddProductPage = () => {
           <div className="-mx-3 md:flex mb-6">
             <div className="md:w-full px-3">
               <label
-                className=" block text-black dark:text-white text-xl text-opacity-80 font-raleway font-semibold mb-2"
+                className=" block text-black dark:text-white text-xl text-opacity-80  font-semibold mb-2"
                 htmlFor="photoURL"
               >
                 Photo
