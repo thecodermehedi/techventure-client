@@ -44,7 +44,7 @@ const UpdateProductPage = () => {
     };
     console.log(updateProduct);
     fetch(`https://techventure-server.onrender.com/products/id/${id}`, {
-      method: "PATCH",
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
@@ -58,6 +58,7 @@ const UpdateProductPage = () => {
             icon: "success",
             confirmButtonText: "Okay",
           });
+          form.reset();
         }
       });
   };
