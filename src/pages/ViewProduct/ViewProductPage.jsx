@@ -1,13 +1,44 @@
 import {useContext} from "react";
 import {useParams} from "react-router-dom";
 import {ProductContext} from "./../../context/ProductProvider";
+import {AuthContext} from "../../context/AuthProvider";
+import Swal from "sweetalert2";
 
 const ViewProductPage = () => {
   const {id} = useParams();
   const products = useContext(ProductContext);
+  const {user} = useContext(AuthContext);
   const product = products.find((product) => product._id === id);
   const addToUserProduct = () => {
-    console.log(product);
+    const userProduct = {
+      email: user?.email,
+      name: product?.name,
+      brand: product?.brand,
+      type: product?.type,
+      price: product?.price,
+      details: product?.details,
+      photoURL: product?.photoURL,
+      rating: product?.rating,
+    };
+    console.log(userProduct);
+    fetch("https://techventure-server.onrender.com/userProducts", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Product added successfully",
+            icon: "success",
+            confirmButtonText: "Okay",
+          });
+        }
+      });
   };
   return (
     <section className="overflow-hidden bg-white py-11 font-poppins dark:bg-gray-800">
