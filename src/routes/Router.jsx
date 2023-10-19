@@ -9,6 +9,7 @@ import MyCartPage from "./../pages/MyCart/MyCartPage";
 import RegisterPage from "../pages/Register/RegisterPage";
 import AddProductPage from "./../pages/AddProduct/AddProductPage";
 import UpdateProductPage from "./../pages/UpdateProduct/UpdateProductPage";
+import Brandpage from "./../pages/Brand/Brandpage";
 
 const Router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const Router = createBrowserRouter([
       {
         path: "/",
         element: <Homepage />,
+      },
+      {
+        path: "/brand/:id",
+        element: <Brandpage />,
       },
       {
         path: "/addproduct",

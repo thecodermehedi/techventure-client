@@ -64,9 +64,7 @@ const RegisterPage = () => {
             body: JSON.stringify(newUser),
           })
             .then((res) => res.json())
-            .then((data) => {
-              console.log(data);
-            });
+            .then(() => {});
           updateProfile(user, {
             displayName: name,
             photoURL: photoURL,

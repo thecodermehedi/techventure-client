@@ -17,7 +17,6 @@ const Loginpage = () => {
     setShowPassword(false);
     signInWithEmail(email, password)
       .then((result) => {
-        console.log(result.user);
         const user = result.user;
         const name = user.displayName;
         const email = user.email;
@@ -29,7 +28,6 @@ const Loginpage = () => {
           photoURL,
           lastSignInTime,
         };
-        console.log(updateUser);
         fetch("https://techventure-server.onrender.com/users", {
           method: "PATCH",
           headers: {
@@ -38,8 +36,7 @@ const Loginpage = () => {
           body: JSON.stringify(updateUser),
         })
           .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
+          .then(() => {
           });
         toast.success("Logged in successfully");
         navigate(location?.state ? location.state : "/");
