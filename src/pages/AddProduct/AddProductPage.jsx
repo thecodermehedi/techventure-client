@@ -102,31 +102,31 @@ const AddProductPage = () => {
                 </option>
                 <option
                   className="text-black dark:text-white bg-white dark:bg-black"
-                  value="Apple"
+                  value="apple"
                 >
                   Apple
                 </option>
                 <option
                   className="text-black dark:text-white bg-white dark:bg-black"
-                  value="Samsung"
+                  value="samsung"
                 >
                   Samsung
                 </option>
                 <option
                   className="text-black dark:text-white bg-white dark:bg-black"
-                  value="Sony"
+                  value="sony"
                 >
                   Sony
                 </option>
                 <option
                   className="text-black dark:text-white bg-white dark:bg-black"
-                  value="LG"
+                  value="lg"
                 >
                   LG
                 </option>
                 <option
                   className="text-black dark:text-white bg-white dark:bg-black"
-                  value="Lenovo"
+                  value="lenovo"
                 >
                   Lenovo
                 </option>
