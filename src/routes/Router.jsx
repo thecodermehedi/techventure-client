@@ -10,6 +10,7 @@ import RegisterPage from "../pages/Register/RegisterPage";
 import AddProductPage from "./../pages/AddProduct/AddProductPage";
 import UpdateProductPage from "./../pages/UpdateProduct/UpdateProductPage";
 import Brandpage from "./../pages/Brand/Brandpage";
+import ViewProductPage from "../pages/ViewProduct/ViewProductPage";
 
 const Router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const Router = createBrowserRouter([
         element: <Brandpage />,
       },
       {
-        path: "/addproduct",
+        path: "/addProduct",
         element: (
           <PrivateRouter>
             <AddProductPage />
@@ -34,7 +35,15 @@ const Router = createBrowserRouter([
         ),
       },
       {
-        path: "/updateproduct/:id",
+        path: "/viewProduct/:id",
+        element: (
+          <PrivateRouter>
+            <ViewProductPage />
+          </PrivateRouter>
+        ),
+      },
+      {
+        path: "/updateProduct/:id",
         element: (
           <PrivateRouter>
             <UpdateProductPage />
@@ -42,7 +51,7 @@ const Router = createBrowserRouter([
         ),
       },
       {
-        path: "/cart",
+        path: "/userCart",
         element: (
           <PrivateRouter>
             <MyCartPage />
