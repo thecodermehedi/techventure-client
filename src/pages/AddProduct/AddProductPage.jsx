@@ -80,6 +80,7 @@ const AddProductPage = () => {
                 id="name"
                 type="text"
                 placeholder="Enter Product name"
+                required
               />
             </div>
             <div className="md:w-1/2 px-3">
@@ -92,10 +93,11 @@ const AddProductPage = () => {
               <select
                 className="select w-full text-black dark:text-white rounded-3xl  py-3 px-4 bg-main bg-opacity-10 focus:outline-none"
                 id="brand"
+                required
               >
                 <option
                   disabled
-                  selected
+                  defaultValue
                   className="text-black dark:text-white bg-white dark:bg-black"
                 >
                   Select Brand
@@ -150,10 +152,11 @@ const AddProductPage = () => {
               <select
                 className="select w-full text-black dark:text-white rounded-3xl  py-3 px-4 bg-main bg-opacity-10 focus:outline-none"
                 id="type"
+                required
               >
                 <option
                   disabled
-                  selected
+                  defaultValue
                   className="text-black dark:text-white bg-white dark:bg-black"
                 >
                   Select Product type
@@ -232,6 +235,7 @@ const AddProductPage = () => {
                 id="price"
                 type="number"
                 placeholder="Enter Product Price"
+                required
               />
             </div>
           </div>
@@ -285,6 +289,7 @@ const AddProductPage = () => {
                 id="photoURL"
                 type="url"
                 placeholder="Enter direct image URL (jpg, jpeg, png, gif, bmp)"
+                required
               />
             </div>
           </div>
