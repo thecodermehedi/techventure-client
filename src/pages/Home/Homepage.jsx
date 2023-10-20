@@ -8,6 +8,12 @@ const Homepage = () => {
   useEffect(() => {
     brands.length > 0 ? setMiniLoading(false) : setMiniLoading(true);
   }, [brands]);
+  
+  useEffect(() => {
+    setTimeout(() => {
+      setMiniLoading(false);
+    }, 5000);
+  }, []);
   return (
     <section>
       {/* Banner Start */}
@@ -16,7 +22,9 @@ const Homepage = () => {
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="mx-auto max-w-xl text-center sm:text-left flex flex-col h-full justify-center">
             <h2 className="text-2xl md:text-3xl lg:text-6xl font-bold text-gray-900 dark:text-white ">
-              Your Tech<br /> Your Rules <br />Explore Endless Options Today!
+              Your Tech
+              <br /> Your Rules <br />
+              Explore Endless Options Today!
             </h2>
 
             <p className="hidden text-gray-500 md:mt-5 md:block ">
