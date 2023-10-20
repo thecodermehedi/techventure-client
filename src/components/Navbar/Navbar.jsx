@@ -20,7 +20,7 @@ const Navbar = () => {
     const prefersDarkScheme = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
-    prefersDarkScheme ? setIsChecked(true) : setIsChecked(false);
+    !prefersDarkScheme ? setIsChecked(true) : setIsChecked(false);
   }, []);
 
   useEffect(() => {
@@ -179,7 +179,7 @@ const Navbar = () => {
               >
                 <p className="text-sm lg:text-base ml-5">
                   <Link className="font-semibold" to={"#"}>
-                    Eric Frusciante
+                    {user?.displayName}
                   </Link>
                 </p>
                 <li className="pt-3">

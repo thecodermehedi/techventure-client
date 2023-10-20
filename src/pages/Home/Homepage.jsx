@@ -12,14 +12,14 @@ const Homepage = () => {
     <section>
       {/* Banner Start */}
 
-      <section className="overflow-hidden bg-[#ebedef] dark:bg-black sm:grid sm:grid-cols-2">
+      <section className="overflow-hidden bg-[#ebedef] dark:bg-black sm:grid sm:grid-cols-2 lg:min-h-[35rem]">
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
-          <div className="mx-auto max-w-xl text-center sm:text-left">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white md:text-3xl">
-              Your Tech, Your Rules: Explore Endless Options Today!
+          <div className="mx-auto max-w-xl text-center sm:text-left flex flex-col h-full justify-center">
+            <h2 className="text-2xl md:text-3xl lg:text-6xl font-bold text-gray-900 dark:text-white ">
+              Your Tech<br /> Your Rules <br />Explore Endless Options Today!
             </h2>
 
-            <p className="hidden text-gray-500 md:mt-4 md:block">
+            <p className="hidden text-gray-500 md:mt-5 md:block ">
               Don&#39;t Let Budget Limit Your Dreams. TechVenture Offers
               Cutting-Edge Tech at Prices You&#39;ll Love. Explore Affordable
               Excellence and Upgrade Your Lifestyle!

@@ -6,16 +6,13 @@ import Router from "./routes/Router";
 import AuthProvider from "./context/AuthProvider";
 import BrandProvider from "./context/BrandProvider";
 import ProductProvider from "./context/ProductProvider";
-import UserProductProvider from "./context/UserProductProvider";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <BrandProvider>
         <ProductProvider>
-          <UserProductProvider>
-            <RouterProvider router={Router} />
-          </UserProductProvider>
+          <RouterProvider router={Router} />
         </ProductProvider>
       </BrandProvider>
     </AuthProvider>

@@ -6,8 +6,8 @@ import Swal from "sweetalert2";
 
 const ViewProductPage = () => {
   const {id} = useParams();
-  const products = useContext(ProductContext);
   const {user} = useContext(AuthContext);
+  const products = useContext(ProductContext);
   const product = products.find((product) => product._id === id);
   const addToUserProduct = () => {
     const userProduct = {
@@ -41,7 +41,7 @@ const ViewProductPage = () => {
       });
   };
   return (
-    <section className="overflow-hidden bg-white py-11 font-poppins dark:bg-gray-800">
+    <section className="overflow-hidden bg-white py-11 font-poppins dark:bg-black">
       <div className="max-w-6xl px-4 py-4 mx-auto lg:py-8 md:px-6">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full mb-8 md:w-1/2 md:mb-0">
@@ -53,15 +53,31 @@ const ViewProductPage = () => {
           </div>
           <div className="w-full px-4 md:w-1/2 ">
             <div className="lg:pl-20">
-              <div className="mb-8 ">
-                <h2 className="max-w-xl mb-6 text-2xl font-bold dark:text-gray-400 md:text-4xl">
+              <div className="mb-8">
+                <h2 className="max-w-xl mb-6 text-2xl font-bold text-black dark:text-white md:text-4xl">
                   {product?.name}
                 </h2>
-                <p className="inline-block mb-6 text-4xl font-bold text-gray-700 dark:text-gray-400 ">
-                  ${product?.price}
-                </p>
-                <p className="max-w-md text-gray-700 dark:text-gray-400">
+                <div className="text-gray-800 dark:text-slate-300 my-5 capitalize flex gap-8">
+                  <p>
+                    <span className="font-semibold">Brand: </span>
+                    {product?.brand}
+                  </p>
+                  <p>
+                    <span className="font-semibold">Rating: </span>
+                    {product?.rating}/10
+                  </p>
+                </div>
+                <p className="text-gray-700 dark:text-gray-400">
                   {product?.details}
+                </p>
+                <div className="text-gray-800 dark:text-slate-300 my-5 capitalize">
+                  <p>
+                    <span className="font-semibold">Stock: </span>
+                    Available
+                  </p>
+                </div>
+                <p className="inline-block text-4xl font-bold text-main">
+                  ${product?.price}
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-4">

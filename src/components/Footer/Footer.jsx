@@ -3,8 +3,8 @@ import {FaFacebook, FaLinkedin, FaXTwitter, FaInstagram} from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <section className="hidden lg:block ">
-        <footer className="footer p-10 bg-white text-black dark:bg-black dark:text-white">
+      <section className="hidden lg:block bg-white dark:bg-black border-t">
+        <footer className="footer p-10 bg-white text-black dark:bg-black dark:text-white lg:ml-20">
           <aside>
             <Link to={"/"}>
               <img src="/logo.png" alt="TechVenture" className="w-44 md:w-56" />
