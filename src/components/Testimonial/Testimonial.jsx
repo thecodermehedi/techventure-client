@@ -1,5 +1,3 @@
-// import PropTypes from "prop-types";
-
 import SwiperSlider from "./../SwiperSlider/SwiperSlider";
 
 const Testimonial = () => {

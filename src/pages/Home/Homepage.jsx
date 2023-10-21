@@ -8,7 +8,7 @@ const Homepage = () => {
   useEffect(() => {
     brands.length > 0 ? setMiniLoading(false) : setMiniLoading(true);
   }, [brands]);
-  
+
   useEffect(() => {
     setTimeout(() => {
       setMiniLoading(false);
@@ -52,7 +52,16 @@ const Homepage = () => {
       </section>
       {/* Banner End */}
       {/* Featured Brands Start */}
-      <section className="bg-white dark:bg-black">
+      <section className="bg-white dark:bg-[#181A1B] py-10">
+        <div className="flex flex-col gap-4 justify-center items-center text-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
+            Explore Top Tech Brands
+          </h2>
+          <p className="text-gray-500 dark:text-white md:text-xl">
+            Discover the Best in Technology from Trusted Names: Quality,
+            Innovation, and Reliability Combined.
+          </p>
+        </div>
         <div className="container mx-auto py-10 ">
           <div className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-4 lg:grid-cols-4 lg:gap-8 text-center">
             {miniLoading ? (
@@ -81,7 +90,7 @@ const Homepage = () => {
       </section>
       {/* Featured Brands End */}
       {/* Stat Section Start */}
-      <section className="bg-white dark:bg-black w-full">
+      <section className="bg-[#ebedef] dark:bg-black w-full">
         <div className="mx-auto container px-4 py-12 sm:px-6 md:py-16 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl">
@@ -95,7 +104,7 @@ const Homepage = () => {
 
           <div className="mt-8 sm:mt-12">
             <dl className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-              <div className="flex flex-col rounded-3xl border border-gray-100 dark:border-gray-500 bg-white dark:bg-black dark:bg-opacity-50  shadow-xl px-4 py-8 text-center">
+              <div className="flex flex-col rounded-3xl border border-gray-100 dark:border-transparent bg-white dark:bg-[#181A1B]  shadow-xl px-4 py-8 text-center">
                 <dt className="order-last text-lg font-medium text-gray-500">
                   Total Sales
                 </dt>
@@ -105,7 +114,7 @@ const Homepage = () => {
                 </dd>
               </div>
 
-              <div className="flex flex-col rounded-3xl border border-gray-100 dark:border-gray-500 bg-white dark:bg-black dark:bg-opacity-50  shadow-xl px-4 py-8 text-center">
+              <div className="flex flex-col rounded-3xl border border-gray-100 dark:border-transparent bg-white dark:bg-[#181A1B]  shadow-xl px-4 py-8 text-center">
                 <dt className="order-last text-lg font-medium text-gray-500">
                   Investors
                 </dt>
@@ -115,7 +124,7 @@ const Homepage = () => {
                 </dd>
               </div>
 
-              <div className="flex flex-col rounded-3xl border border-gray-100 dark:border-gray-500 bg-white dark:bg-black dark:bg-opacity-50  shadow-xl px-4 py-8 text-center">
+              <div className="flex flex-col rounded-3xl border border-gray-100 dark:border-transparent bg-white dark:bg-[#181A1B]  shadow-xl px-4 py-8 text-center">
                 <dt className="order-last text-lg font-medium text-gray-500">
                   Users
                 </dt>

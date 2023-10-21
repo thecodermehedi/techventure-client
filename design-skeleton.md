@@ -85,7 +85,3 @@
 - server github link
 - client live link
 
-## Deadline ?
-- 2 day (1=server + 1=client)
-- 1 day (testing,debugging,improve)
-- **Date:** ****20 OCT 11:59PM****

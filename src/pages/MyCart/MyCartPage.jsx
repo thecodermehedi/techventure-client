@@ -44,18 +44,18 @@ const MyCartPage = () => {
   };
 
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen  bg-[#ebedef] dark:bg-black flow-root">
       <header className="flex justify-center items-center text-center my-10">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-            Shopping Cart
-          </h2>
-        </header>
-      <div className="container mx-auto flex justify-center items-center text-center">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+          Shopping Cart
+        </h2>
+      </header>
+      <div className="container mx-auto flex justify-center items-center text-center ">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 place-items-center mb-20 mx-5 lg:mx-0">
           {userProducts?.map((product) => (
             <div
               key={product?._id}
-              className="card w-full md:card-side bg-[#ECEAE3] dark:bg-black border-2 border-transparent dark:border-white bg-opacity-50 "
+              className="card w-full md:card-side bg-white dark:bg-[#181A1B] shadow-xl rounded-3xl "
             >
               <figure className="h-auto overflow-hidden md:w-96 md:h-64 object-contain">
                 <img
@@ -90,7 +90,7 @@ const MyCartPage = () => {
                 <div className="flex my-5 md:my-0 md:flex-col justify-center items-center gap-4">
                   <button
                     onClick={() => handleProductDelete(product?._id)}
-                    className="border border-transparent py-2 px-4 w-full text-center capitalize rounded-3xl bg-red-500 bg-opacity-20 hover:bg-red-500 hover:text-black text-red-500 hover:border-red-500 font-semibold"
+                    className="border border-transparent py-2 px-4 w-full text-center capitalize rounded-3xl bg-red-500 bg-opacity-20 hover:bg-red-500 hover:text-black text-red-500 hover:border-red-500 font-semibold transition duration-300 ease-in-out"
                   >
                     remove
                   </button>

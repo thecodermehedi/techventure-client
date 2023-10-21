@@ -7,30 +7,30 @@ import {IoSettingsOutline, IoLogOutOutline} from "react-icons/io5";
 import {toast} from "sonner";
 const Navbar = () => {
   const {user, signOutUser} = useContext(AuthContext);
-  const [isChecked, setIsChecked] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   const [miniLoading, setMiniLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setMiniLoading(false);
-    }, 1500);
+    }, 2500);
   }, [user]);
 
   useEffect(() => {
     const prefersDarkScheme = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
-    !prefersDarkScheme ? setIsChecked(true) : setIsChecked(false);
+    prefersDarkScheme ? setIsDark(false) : setIsDark(true);
   }, []);
 
   useEffect(() => {
-    isChecked
+    isDark
       ? document.documentElement.classList.remove("dark")
       : document.documentElement.classList.add("dark");
-  }, [isChecked]);
+  }, [isDark]);
 
   const handleSwitch = () => {
-    setIsChecked(!isChecked);
+    setIsDark(!isDark);
   };
 
   const handleLogout = () => {
@@ -51,7 +51,7 @@ const Navbar = () => {
             ? "pending"
             : isActive
             ? "active font-semibold text-main lg:text-black lg:dark:text-white px-5 py-2 border-transparent lg:border-black lg:dark:border-white border rounded-3xl"
-            : "font-semibold px-5 py-2 text-black dark:text-white lg:hover:border-black lg:dark:hover:border-white border-transparent border rounded-3xl"
+            : "font-semibold px-5 py-2 text-black dark:text-white lg:hover:border-black lg:dark:hover:border-white border-transparent border rounded-3xl transition duration-300 ease-in-out"
         }
       >
         Home
@@ -63,7 +63,7 @@ const Navbar = () => {
             ? "pending"
             : isActive
             ? "active font-semibold text-main lg:text-black lg:dark:text-white px-5 py-2 border-transparent lg:border-black lg:dark:border-white border rounded-3xl"
-            : "font-semibold px-5 py-2 text-black dark:text-white lg:hover:border-black lg:dark:hover:border-white border-transparent border rounded-3xl"
+            : "font-semibold px-5 py-2 text-black dark:text-white lg:hover:border-black lg:dark:hover:border-white border-transparent border rounded-3xl transition duration-300 ease-in-out"
         }
       >
         AddProduct
@@ -75,7 +75,7 @@ const Navbar = () => {
             ? "pending"
             : isActive
             ? "active font-semibold text-main lg:text-black lg:dark:text-white px-5 py-2 border-transparent lg:border-black lg:dark:border-white border rounded-3xl"
-            : "font-semibold px-5 py-2 text-black dark:text-white lg:hover:border-black lg:dark:hover:border-white border-transparent border rounded-3xl"
+            : "font-semibold px-5 py-2 text-black dark:text-white lg:hover:border-black lg:dark:hover:border-white border-transparent border rounded-3xl transition duration-300 ease-in-out"
         }
       >
         MyCart
@@ -84,7 +84,7 @@ const Navbar = () => {
   );
   return (
     <nav className="w-full bg-white dark:bg-black pr-2 py-3 md:px-5 md:py-5 lg:px-20">
-      <div className="navbar">
+      <div className="navbar ">
         <div className="navbar-start">
           <div className="dropdown">
             <label
@@ -112,15 +112,11 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           <label className="swap swap-rotate invisible md:visible md:mr-8 ">
-            <input
-              type="checkbox"
-              checked={isChecked}
-              onChange={handleSwitch}
-            />
+            <input type="checkbox" checked={isDark} onChange={handleSwitch} />
 
             {/* sun icon */}
             <svg
-              className="swap-on fill-black w-10 h-10"
+              className="swap-off fill-white w-10 h-10"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -129,7 +125,7 @@ const Navbar = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-off fill-white w-10 h-10"
+              className="swap-on fill-black w-10 h-10"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -197,7 +193,7 @@ const Navbar = () => {
           ) : (
             <Link
               to={"/login"}
-              className="btn rounded-3xl px-5 md:px-8 lg:px-10  text-black dark:hover:text-white  min-h-0 h-8 md:h-10 lg:h-12 bg-premium border-none transition-all duration-300"
+              className="btn rounded-3xl px-5 md:px-8 lg:px-10  text-black dark:hover:text-white  min-h-0 h-8 md:h-10 lg:h-12 bg-premium border-none transition duration-300 ease-in-out"
             >
               login
             </Link>

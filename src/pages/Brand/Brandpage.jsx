@@ -53,8 +53,8 @@ const Brandpage = () => {
     return <Loading />;
   } else {
     return (
-      <section className="bg-white dark:bg-black">
-        <header>
+      <section className="bg-[#ebedef] dark:bg-black">
+        <header className="bg-white dark:bg-black">
           <Swiper
             centeredSlides={true}
             speed={1500}
@@ -87,17 +87,17 @@ const Brandpage = () => {
             ;
           </Swiper>
         </header>
-        <div className="flex justify-center items-center bg-white dark:bg-black">
+        <div className="flex justify-center items-center bg-white ">
           <img src={brand?.logo} alt={brand?.name} className="w-32 my-5" />
         </div>
-        <div className="container mx-auto flex justify-center items-center text-center">
+        <div className="container mx-auto flex justify-center items-center text-center ">
           {brandProducts.length > 0 ? (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 place-items-center my-20 mx-5 lg:mx-0">
               {brandProducts &&
                 brandProducts?.map((product) => (
                   <div
                     key={product?._id}
-                    className="card w-full md:card-side bg-[#ECEAE3] dark:bg-black border-2 border-transparent dark:border-white bg-opacity-50 "
+                    className="card w-full md:card-side bg-white dark:bg-[#181A1B] shadow-xl rounded-3xl"
                   >
                     <figure className="h-auto overflow-hidden md:w-96 md:h-64 object-contain">
                       <img
@@ -131,14 +131,14 @@ const Brandpage = () => {
                       </div>
                       <div className="flex my-5 md:my-0 md:flex-col justify-center items-center gap-4">
                         <Link
-                          className="border border-transparent py-2 px-4 w-full text-center capitalize rounded-3xl bg-blue-500 bg-opacity-20 hover:bg-blue-500 hover:text-black text-blue-500 hover:border-blue-500 font-semibold"
+                          className="border border-transparent py-2 px-4 w-full text-center capitalize rounded-3xl bg-blue-500 bg-opacity-20 hover:bg-blue-500 hover:text-black text-blue-500 hover:border-blue-500 font-semibold transition duration-300 ease-in-out"
                           to={`/viewProduct/id/${product?._id}`}
                         >
                           details
                         </Link>
                         <Link
                           to={`/updateProduct/id/${product?._id}`}
-                          className="border border-transparent py-2 px-4 w-full text-center capitalize rounded-3xl bg-green-500 bg-opacity-20 hover:bg-green-500 hover:text-black text-green-500 hover:border-green-500 font-semibold"
+                          className="border border-transparent py-2 px-4 w-full text-center capitalize rounded-3xl bg-green-500 bg-opacity-20 hover:bg-green-500 hover:text-black text-green-500 hover:border-green-500 font-semibold transition duration-300 ease-in-out"
                         >
                           update
                         </Link>
