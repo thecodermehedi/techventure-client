@@ -86,7 +86,7 @@ const Loginpage = () => {
                   name="email"
                   id="email"
                   placeholder="Email Address"
-                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg"
+                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg w-full"
                   required
                 />
                 <div className="flex relative">
