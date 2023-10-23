@@ -34,7 +34,7 @@ const SwiperSlider = () => {
               <p className="text-[0.65rem] text-black dark:text-white text-opacity-60 mb-5">
                 Tech Enthusiast
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-sm">
                 TechVenture redefined my gadget experience! Their customer
                 service is exceptional, and the products are top-notch. I&#39;ve
                 never been happier with my tech purchases.
@@ -54,7 +54,7 @@ const SwiperSlider = () => {
               <p className="text-[0.65rem] text-black dark:text-white text-opacity-60 mb-5">
                 IT Professional
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-sm">
                 As an IT expert, I demand the best. TechVenture not only met but
                 exceeded my expectations. Their devices are cutting-edge, and
                 the support team is always ready to assist. Truly impressive!
@@ -74,7 +74,7 @@ const SwiperSlider = () => {
               <p className="text-[0.65rem] text-black dark:text-white text-opacity-60 mb-5">
                 Digital Marketer
               </p>
-              <p className="text-gray-400">
+              <p className="text-gray-400 text-sm">
                 TechVenture isn&#39;t just a brand; it&#39;s a tech revolution.
                 Their gadgets not only perform brilliantly but also add style to
                 my digital life. I&#39;m now a loyal customer, thanks to their

@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {CgMenuLeft} from "react-icons/cg";
+import {CgLogIn, CgMenuLeft} from "react-icons/cg";
 import {Link, NavLink} from "react-router-dom";
 import {useContext} from "react";
 import {AuthContext} from "../../context/AuthProvider";
@@ -111,12 +111,12 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 gap-16">{NavLinks}</ul>
         </div>
         <div className="navbar-end">
-          <label className="swap swap-rotate invisible md:visible md:mr-8 ">
+          <label className="swap swap-rotate mr-2 md:mr-8 ">
             <input type="checkbox" checked={isDark} onChange={handleSwitch} />
 
             {/* sun icon */}
             <svg
-              className="swap-off fill-white w-10 h-10"
+              className="swap-off fill-main w-7 md:w-10 h-10"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -125,7 +125,7 @@ const Navbar = () => {
 
             {/* moon icon */}
             <svg
-              className="swap-on fill-black w-10 h-10"
+              className="swap-on fill-main w-7 md:w-10 h-10"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -191,12 +191,20 @@ const Navbar = () => {
               </ul>
             </div>
           ) : (
-            <Link
-              to={"/login"}
-              className="btn rounded-3xl px-5 md:px-8 lg:px-10  text-black dark:hover:text-white  min-h-0 h-8 md:h-10 lg:h-12 bg-premium border-none transition duration-300 ease-in-out"
-            >
-              login
-            </Link>
+            <>
+              <Link
+                to={"/login"}
+                className="btn rounded-3xl px-5 md:px-8 lg:px-10  text-black dark:hover:text-white  min-h-0 h-8 md:h-10 lg:h-12 bg-premium border-none transition duration-300 ease-in-out hidden md:flex"
+              >
+                login
+              </Link>
+              <Link
+                to={"/login"}
+                className="block md:hidden text-3xl text-main"
+              >
+                <CgLogIn />
+              </Link>
+            </>
           )}
         </div>
       </div>

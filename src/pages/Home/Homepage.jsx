@@ -8,12 +8,6 @@ const Homepage = () => {
   useEffect(() => {
     brands.length > 0 ? setMiniLoading(false) : setMiniLoading(true);
   }, [brands]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setMiniLoading(false);
-    }, 5000);
-  }, []);
   return (
     <section>
       {/* Banner Start */}
