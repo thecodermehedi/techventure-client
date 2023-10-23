@@ -102,7 +102,7 @@ const RegisterPage = () => {
                   name="name"
                   id="name"
                   placeholder="Name"
-                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg placeholder:text-gray-600 focus:placeholder:text-opacity-0"
+                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg placeholder:text-gray-600 focus:placeholder:text-opacity-0 w-full"
                   required
                 />
                 <input
@@ -110,7 +110,7 @@ const RegisterPage = () => {
                   name="email"
                   id="email"
                   placeholder="Email Address"
-                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg placeholder:text-gray-600 focus:placeholder:text-opacity-0"
+                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg placeholder:text-gray-600 focus:placeholder:text-opacity-0 w-full"
                   required
                 />
                 <input
@@ -118,7 +118,7 @@ const RegisterPage = () => {
                   name="photoURL"
                   id="photoURL"
                   placeholder="Enter direct image URL (jpg, jpeg, png, gif, bmp)"
-                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg placeholder:text-gray-600 focus:placeholder:text-opacity-0"
+                  className="input bg-main bg-opacity-10 rounded-3xl border-none focus:outline-none mb-2 text-lg placeholder:text-gray-600 focus:placeholder:text-opacity-0 w-full"
                   required
                 />
                 <div className="flex flex-col relative">
