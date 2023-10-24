@@ -20,7 +20,6 @@ const ViewProductPage = () => {
       photoURL: product?.photoURL,
       rating: product?.rating,
     };
-    console.log(userProduct);
     fetch("https://techventure-server.onrender.com/userProducts", {
       method: "POST",
       headers: {
@@ -30,7 +29,6 @@ const ViewProductPage = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Product added successfully",

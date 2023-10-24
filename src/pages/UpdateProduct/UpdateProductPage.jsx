@@ -42,7 +42,6 @@ const UpdateProductPage = () => {
       rating,
       photoURL,
     };
-    console.log(updateProduct);
     fetch(`https://techventure-server.onrender.com/products/id/${id}`, {
       method: "PUT",
       headers: {
@@ -52,8 +51,7 @@ const UpdateProductPage = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        if (data.insertedId) {
+        if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Product updated successfully",
             icon: "success",
