@@ -1,16 +1,26 @@
 <div align="center">
 
-![](./public/logo.png)
+![](./public/icon.png)
 
-TechVenture is a fearless and forward-thinking technology and electronics brand that thrives on exploring new technologies and pushing the boundaries of innovation.
+# TechVenture
 
-## Live Links
+Get Your Dream Tech Product Today
 
-[![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)](http://techventure-client.web.app) [![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://techventure.vercel.app)
+[Live Website](http://techventure-client.web.app)
+
+ [Mirror Link](https://techventure.vercel.app)
 
 </div>
 
-## Features:
+
+## Introduction
+
+![](./public//preview.png)
+
+Techventure is an innovative e-commerce platform specializing in technology and electronics, offering a user-friendly interface for users to explore, add, and manage their favorite tech products. The platform focuses on a seamless user experience, incorporating modern design principles and a range of features to enhance online shopping.
+
+
+## ✅ Features
 
 Features list of TechVenture website, highlighting the key functionalities and attributes:
 
